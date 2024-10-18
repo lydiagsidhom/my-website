@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Lydia Sidhom, data scientist and journalist">
+    <title>Lydia Sidhom</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DejaVu+Sans+Mono&display=swap');
+
+        body {
+            font-family: 'DejaVu Sans Mono', monospace;
+            background-color: #1e1e1e;
+            color: #d1d1d1;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #151515;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #d1d1d1;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #d1d1d1;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px; /* Adjust paragraph spacing */
+        }
+
+        .work-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: -5px;
+        }
+
+        .work-item {
+            margin: 5px;
+            width: calc(50% - 10px);
+            background-color: #2a2a2a;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative; /* Positioning context for the link */
+            display: flex; /* Use flexbox for better layout */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            height: 100%; /* Ensure the box has a defined height */
+            flex-grow: 1;
+        }
+
+        .work-item a {
+            display: flex; /* Allow for stacking of image and text */
+            flex-direction: column; /* Stack image and title vertically */
+            align-items: center; /* Center the content */
+            text-decoration: none; /* Remove underline from the link */
+            color: inherit; /* Inherit color from the parent */
+            height: 100%; /* Make the anchor fill the container */
+            padding: 10px; /* Optional padding for touch targets */
+        }
+
+        .work-item img {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 3px; /* Rounded corners */
+            margin-bottom: 10px; /* Space between image and title */
+        }
+
+        .work-item h3 {
+            margin: 0; /* Remove margin for consistent spacing */
+            color: #d1d1d1; /* Ensure text color is visible */
+        }
+
+        .work-item:hover {
+            transform: scale(1.03); /* Hover effect */
+        }
+
+        .scroll-box {
+            width: 100%; /* Make sure it takes up full width */
+            height: hidden;
+        }
+
+        .scroll-box video {
+            max-width: 100%; /* Ensure the video is responsive */
+            height: 100%; /* Maintain aspect ratio */
+            display: block; /* Ensure no extra space around the video */
+            margin: 0 auto; /* Center the video */
+            object-fit: contain;
+        }
+
+        .scroll-box {
+            position: relative; /* Positioning context for the link */
+        }
+
+        .video-link {
+            display: block; /* Make the link a block element to occupy full width */
+            margin-bottom: 10px;
+            text-align: center; /* Center the text */
+            color: #d1d1d1; /* Link color */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px; /* Padding for the link */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            margin-bottom: 5px; /* Space between the link and the video */
+            border-radius: 5px;
+        }
+
+        .video-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .work-item {
+            display: flex;
+            flex-direction: column;
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 5px;
+            width: calc(33% - 30px);
+            height: auto; /* Let the height adjust based on content */
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #151515;
+            color: #999;
+        }
+
+        footer a {
+            color: #d1d1d1;
+            text-decoration: none;
+        }
+
+        a {
+            color: #ADD8E6; /* Light blue color for links */
+            text-decoration: none; /* Removes underline */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* Ensure mobile responsiveness */
+        @media (max-width: 768px) {
+            .work-item {
+                width: 100%; /* Full width on small screens */
+                margin: 10px 0; /* Adjust margins */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lydia Sidhom</h1>
+        <p>data scientist | journalist | researcher</p>
+    </header>
+
+    <!-- About Section -->
+    <section>
+        <h2>about me</h2>
+        <p>Welcome! I'm Lydia Sidhom, an undergraduate at the University of California, Berkeley pursuing degrees in data science and political science. </p>
+        <p> I enjoy telling stories through data. Bay Area raised, I have worked as a data reporting intern at the <a href="https://www.sfchronicle.com/author/lydia-sidhom/" target="_blank">San Francisco Chronicle</a>, a Dow Jones News Fund reporting intern at <a href="https://localnewsmatters.org/author/lydia-sidhom-bay-city-news/" target="_blank">Bay City News</a>, and a data reporter and editor at UC Berkeley’s independent, student-run newspaper The Daily Californian.</p>
+        <p>I’m interested in the role of data in the U.S. criminal legal system. I worked on a project at UC Berkeley’s Goldman School of Public Policy’s <a href="https://possibilitylab.berkeley.edu/" target="_blank">Possibility Lab </a>that helped expedite criminal case resentencing in California through building a data automation tool that sped up the case review process. The project was awarded the Microsoft Catalyst Grant, and the tool is now being used in 12 District Attorney offices across the state. I’m currently working as a data scientist for the U.S. Department of Justice Bureau of Prisons to investigate the possibility of using re-conviction instead of re-arrest as a proxy for a defendant recommitting a crime in a federal recidivism algorithm. </p>
+        <p>I'm also passionate about data science and computer science pedagogy. At Berkeley, I was on the teaching staff of Data 8, Berkeley's foundational Python and statistics course, for multiple semesters. I also worked as a curriculum developer for the Human Contexts and Ethics wing of Berkeley's College of Computing, Data Science, and Society, as well as for the undergraduate legal studies course Data, Prediction, and Law. </p>
+        <p>You can access my <a href="https://docs.google.com/document/d/1pXsmNtoy97JqfDpotDitHn0Ddaks3Zo8zULv3y2idgs/edit?usp=sharing" target="_blank">full CV here.</a>
+    </section>
+    <!-- Work Section -->
+    <section>
+        <h2>clips</h2>
+        <div class="work-grid">
+            <div class="work-item">
+                <a href="https://www.sfchronicle.com/bayarea/article/disabled-parking-fraud-oakland-19651898.php?fromrichie" target="_blank">
+                    <img src="images/disabled parking screenshot.png" alt="Disabled parking fraud is rampant. Why is Oakland no longer enforcing it?">
+                    <h3>Why doesn't Oakland enforce disabled parking fraud?</h3>
+                    <br>
+                    <p>Python, RegEx, Folium </p>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://www.sfchronicle.com/projects/2024/sf-grocery-stores-price-comparison/?fromrichie" target="_blank">
+                    <img src="images/groceries screenshot.png" alt="We tested 12 S.F. grocery stores. This one was the cheapest">
+                    <h3>What's the cheapest grocery store in S.F.?</h3>
+                    <br>
+                    <p>Excel, (very) intensive on-the-ground data collection</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://www.sfchronicle.com/california/article/silicon-valley-trump-donations-19621024.php?fromrichie" target="_blank">
+                    <img src="/images/ah screenshot.png" alt="Andreessen Horowitz political giving">
+                    <h3>These Silicon Valley power players are backing Trump. Here’s how their political giving has evolved</h3>
+                    <br>
+                    <p>Python, RegEx</p>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://www.sfchronicle.com/california/article/solar-panels-san-francisco-19526186.php?fromrichie" target="_blank">
+                    <img src="images/solar screenshot.png" alt="San Francisco has seen the most dramatic drop in solar adoption across California">
+                    <h3>San Francisco has seen the most dramatic drop in solar adoption across California</h3>
+                    <br>
+                    <p>Excel, Python</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://www.sfchronicle.com/california/article/solar-panels-san-francisco-19526186.php?fromrichie" target="_blank">
+                    <img src="images/behested screenshot.png" alt="As an S.F. supervisor, Mark Farrell wanted to fund a pet cause. He repeatedly turned to companies with business at City Hall">
+                    <h3>As an S.F. supervisor, Mark Farrell wanted to fund a pet cause. He repeatedly turned to companies with business at City Hall</h3>
+                    <br>
+                    <p>Google Pinpoint, Excel</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://dailycal-projects.netlify.app/2023-06-30-warnme" target="_blank">
+                    <img src="images/warnme screenshot.png" alt="Sound the alarm: A look inside WarnMe notifications">
+                    <h3>Sound the alarm: A look inside WarnMe notifications</h3>
+                    <br>
+                    <p>JavaScript React</p>
+                    </h3>
+                </a>
+            </div>
+
+    <section>
+        <h2>other work</h2>
+        <div class="work-grid">
+            <!-- Predicting Judicial Decisions Work Item -->
+            <div class="work-item">
+                <a href="https://lydiagsidhom.github.io/judicial-decisions/" target="_blank">
+                    <img src="images/data science lifecycle.png" alt="data science lifecycle">
+                    <h3>Predicting Judicial Decisions Problem Set</h3>
+                    <p>An assignment I developed for an undergraduate UC Berkeley course that uses machine learning methods to predict judge decisions at the pretrial arraignment stage of the criminal justice process using a real world dataset from New York.</p>
+                </a>
+            </div>
+    
+            <!-- Interactive Video Box -->
+        <div class="work-grid">
+            <div class="work-item">
+                <a href="https://colab.research.google.com/drive/1trLYfgyHJhvZ4oJ4klKaccx_0HIL2ESV?usp=sharing" target="_blank">
+                    <img src="images/pset screenshot.png" alt="pset">
+                    <h3>Problem Set Jupyter Notebook (link)</h3>
+                </a>
+            </div>
+    </section>
+    
+
+    <section>
+        <h2>talks & presentations</h2>
+        <br>
+        * <b>Northeastern University</b>. “Student in the Loop: The Value of Student Feedback & Involvement in Data Ethics Education.” Mozilla Program on Responsible Computing Education. 2024.
+        <br>
+        <br>
+        * <b>Berkeley Law.</b> “Bias in Artificial Intelligence: An Overview.” 2023.
+        <br>
+        <br>
+        * <b>Berkeley Law.</b> “What's in an Algorithm?: The U.S. Criminal Justice System, Data Science, and Law.” 2022.
+        <br>
+        <br>
+        * <b>UC Berkeley Data Science Society.</b> “What Data Tells Us About Race.” 2021.
+
+    </section>
+
+    <!-- Contact Section -->
+    <section>
+        <h2>contact me</h2>
+        <p>Feel free to reach out at <a href="mailto:lydiasidhom@berkeley.edu">lydiasidhom@berkeley.edu.</a> </p>
+        <p><a href="https://x.com/SidhomLydia" target="_blank">Twitter/X</a> | <a href="https://www.linkedin.com/in/lydia-sidhom000/" target="_blank">LinkedIn</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lydia Sidhom. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
